@@ -1,300 +1,101 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Isuru Liyanage | Portfolio</title>
+    <title>Isuru Liyanage | Personal Portfolio</title>
 
-    <meta name="description" content="Isuru Liyanage - Personal Developer Portfolio">
+    <meta name="description"
+          content="Official portfolio of Isuru Liyanage, IT Undergraduate, Technology Enthusiast and Aspiring Software Developer.">
 
-    <style>
-        /* BASIC SETTINGS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+    <meta name="author" content="Isuru Liyanage">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: #f8fafc;
-            line-height: 1.6;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        /* NAVIGATION */
-        header {
-            background: #111827;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid #263449;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #38bdf8;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav ul a:hover {
-            color: #38bdf8;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(
-                135deg, #0f172a, #172554
-            );
-        }
-
-        .hero-content {
-            max-width: 700px;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            line-height: 1.2;
-            margin: 15px 0;
-        }
-
-        .hero h1 span {
-            color: #38bdf8;
-        }
-
-        .hero p {
-            color: #cbd5e1;
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-
-        .small-title {
-            color: #38bdf8;
-            letter-spacing: 3px;
-            font-weight: bold;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #0284c7;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 7px;
-            transition: 0.3s;
-            margin-right: 10px;
-        }
-
-        .btn:hover {
-            background: #0369a1;
-            transform: translateY(-3px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 1px solid #38bdf8;
-        }
-
-        /* COMMON SECTIONS */
-        section {
-            padding: 85px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 35px;
-            margin-bottom: 40px;
-        }
-
-        .section-title span {
-            color: #38bdf8;
-        }
-
-        /* ABOUT */
-        .about-content {
-            max-width: 750px;
-            margin: auto;
-            text-align: center;
-            color: #cbd5e1;
-            font-size: 18px;
-        }
-
-        /* SKILLS */
-        .skills {
-            background: #111827;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 18px;
-        }
-
-        .skill {
-            background: #1e293b;
-            border: 1px solid #334155;
-            padding: 20px 35px;
-            border-radius: 10px;
-            color: #38bdf8;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .skill:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-        }
-
-        /* PROJECTS */
-        .project-card {
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #334155;
-            max-width: 500px;
-            margin: auto;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-        }
-
-        .project-card h3 {
-            color: #38bdf8;
-            margin-bottom: 12px;
-        }
-
-        .project-card p {
-            color: #cbd5e1;
-            margin-bottom: 20px;
-        }
-
-        /* CONTACT */
-        .contact {
-            background: #111827;
-            text-align: center;
-        }
-
-        .contact p {
-            color: #cbd5e1;
-            margin-bottom: 25px;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #94a3b8;
-            background: #0b1120;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 600px) {
-
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero {
-                min-height: 70vh;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .skill {
-                padding: 15px 22px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- ================= HEADER ================= -->
+
     <header>
         <div class="container">
+
             <nav>
-                <a href="#home" class="logo">ISURU.</a>
+
+                <a href="#home" class="logo">
+                    ISURU<span>.</span>
+                </a>
 
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+
             </nav>
+
         </div>
     </header>
 
-    <!-- HOME -->
+
+    <!-- ================= HOME SECTION ================= -->
+
     <section class="hero" id="home">
+
         <div class="container">
+
+            <!-- Personal Banner -->
+
+            <img
+                src="profile-banner.png"
+                class="hero-banner"
+                alt="Isuru Liyanage Personal Banner"
+            >
+
             <div class="hero-content">
 
-                <p class="small-title">WELCOME TO MY PORTFOLIO</p>
+                <!-- Profile Photo -->
+
+                <img
+                    src="isuru-profile.png"
+                    class="profile-photo"
+                    alt="Isuru Liyanage"
+                >
+
+                <p class="small-title">
+                    IT UNDERGRADUATE | TECHNOLOGY ENTHUSIAST
+                </p>
 
                 <h1>
                     Hi, I'm <span>Isuru Liyanage</span>
                 </h1>
 
+                <h2>
+                    Aspiring Software Developer
+                </h2>
+
                 <p>
-                    I'm learning Web Development and building
-                    my skills in HTML, CSS, JavaScript,
-                    Git and GitHub.
+                    Technology Enthusiast | Educator |
+                    Lifelong Learner
+                </p>
+
+                <p>
+                    I enjoy transforming ideas into practical
+                    digital solutions while continuously
+                    learning new technologies and developing
+                    my professional skills.
                 </p>
 
                 <a href="#projects" class="btn">
-                    View My Work
+                    Explore My Work
                 </a>
 
                 <a href="#contact" class="btn btn-outline">
@@ -302,11 +103,16 @@
                 </a>
 
             </div>
+
         </div>
+
     </section>
 
-    <!-- ABOUT -->
+
+    <!-- ================= ABOUT SECTION ================= -->
+
     <section id="about">
+
         <div class="container">
 
             <h2 class="section-title">
@@ -314,77 +120,415 @@
             </h2>
 
             <div class="about-content">
+
                 <p>
-                    Hello! I'm Isuru Liyanage.
-
-                    I'm passionate about technology
-                    and learning web development.
-
-                    I enjoy creating websites and
-                    improving my programming skills.
-
-                    My goal is to become a professional
-                    web developer.
+                    I am Isuru Liyanage, an Information Technology
+                    undergraduate with a passion for technology,
+                    education, software development, environmental
+                    sustainability and community development.
                 </p>
+
+                <br>
+
+                <p>
+                    I enjoy transforming ideas into practical
+                    digital solutions while continuously learning
+                    new technologies and developing my
+                    professional skills.
+                </p>
+
+                <br>
+
+                <p>
+                    My interests extend beyond IT into teaching,
+                    leadership, environmental initiatives and
+                    creating meaningful social impact.
+                </p>
+
             </div>
 
         </div>
+
     </section>
 
-    <!-- SKILLS -->
-    <section class="skills" id="skills">
+
+    <!-- ================= EDUCATION SECTION ================= -->
+
+    <section class="skills" id="education">
+
         <div class="container">
 
             <h2 class="section-title">
-                My <span>Skills</span>
+                My <span>Education</span>
+            </h2>
+
+            <div class="project-card">
+
+                <h3>
+                    BSc (Hons) in Information Technology
+                </h3>
+
+                <p>
+                    NIIBS Campus, Kelaniya
+                </p>
+
+                <p>
+                    Undergraduate – Second Year
+                </p>
+
+                <hr>
+
+                <br>
+
+                <h3>
+                    Additional Qualifications
+                </h3>
+
+                <p>
+                    Certificate in Human Resource Management
+                </p>
+
+                <p>
+                    Certificate in Computer Applications
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS SECTION ================= -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Technical <span>Skills</span>
             </h2>
 
             <div class="skill-list">
 
                 <div class="skill">HTML</div>
+
                 <div class="skill">CSS</div>
+
                 <div class="skill">JavaScript</div>
+
+                <div class="skill">PHP</div>
+
+                <div class="skill">MySQL</div>
+
+                <div class="skill">Java</div>
+
                 <div class="skill">Git</div>
+
                 <div class="skill">GitHub</div>
 
+                <div class="skill">C++</div>
+
+                <div class="skill">Python</div>
+
+                <div class="skill">Cisco Networking</div>
+
+                <div class="skill">Microsoft Office</div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
+
+    <!-- ================= PROJECTS SECTION ================= -->
+
+    <section class="skills" id="projects">
+
         <div class="container">
 
             <h2 class="section-title">
                 My <span>Projects</span>
             </h2>
 
-            <div class="project-card">
+            <div class="skill-list">
 
-                <h3>My Portfolio Website</h3>
+                <div class="project-card">
 
-                <p>
-                    My personal portfolio website built
-                    using HTML and CSS and published
-                    using GitHub Pages.
-                </p>
+                    <h3>Personal Portfolio Website</h3>
 
-                <a
-                    href="https://github.com/liyanageisuru/MyPortfolio"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn"
-                >
-                    View on GitHub
-                </a>
+                    <p>
+                        A personal portfolio website showcasing
+                        my skills, education, experience and
+                        development journey.
+                    </p>
+
+                    <p>
+                        HTML | CSS | Git | GitHub
+                    </p>
+
+                    <a
+                        href="https://github.com/liyanageisuru/MyPortfolio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn"
+                    >
+                        View Project
+                    </a>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>EcoTrack</h3>
+
+                    <p>
+                        An environmental technology concept
+                        focused on carbon footprint tracking,
+                        sustainability and environmental
+                        awareness.
+                    </p>
+
+                    <p>
+                        HTML | CSS | JavaScript | PHP | MySQL
+                    </p>
+
+                    <p>
+                        <strong>Status:</strong> Project Concept
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>GAJAMAN</h3>
+
+                    <p>
+                        A proposed service provider management
+                        platform designed to connect users
+                        with service providers.
+                    </p>
+
+                    <p>
+                        Web Development | UI/UX | System Analysis
+                    </p>
+
+                    <p>
+                        <strong>Status:</strong> Project Concept
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>School Management System</h3>
+
+                    <p>
+                        An academic project concept for
+                        managing school administration
+                        and educational activities.
+                    </p>
+
+                    <p>
+                        Java | Swing | SQLite | JDBC
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <h3>Computer Network Design</h3>
+
+                    <p>
+                        Network design and configuration
+                        using routers, switches and
+                        networking technologies.
+                    </p>
+
+                    <p>
+                        Cisco Packet Tracer | Networking
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
+
     </section>
 
-    <!-- CONTACT -->
+
+    <!-- ================= EXPERIENCE SECTION ================= -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Professional <span>Experience</span>
+            </h2>
+
+            <div class="project-card">
+
+                <h3>Hayleys Fabric PLC</h3>
+
+                <p>
+                    Store Assistant / Warehouse Experience
+                </p>
+
+                <ul>
+
+                    <li>
+                        Assisted in warehouse and store operations.
+                    </li>
+
+                    <li>
+                        Supported inventory handling and
+                        quality maintenance.
+                    </li>
+
+                    <li>
+                        Worked with SAP, FileMaker and
+                        Microsoft Office.
+                    </li>
+
+                    <li>
+                        Assisted with administrative tasks.
+                    </li>
+
+                </ul>
+
+                <br>
+
+                <h3>CEO Tech Academy</h3>
+
+                <p>
+                    ICT Instructor
+                </p>
+
+                <ul>
+
+                    <li>
+                        Conducted ICT lessons for students.
+                    </li>
+
+                    <li>
+                        Helped students improve computer
+                        and technical skills.
+                    </li>
+
+                    <li>
+                        Supported practical learning
+                        and student development.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LEADERSHIP SECTION ================= -->
+
+    <section class="skills" id="leadership">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Leadership & <span>Volunteering</span>
+            </h2>
+
+            <div class="project-card">
+
+                <h3>Planet Protectors</h3>
+
+                <p>
+                    National Organizer
+                </p>
+
+                <ul>
+
+                    <li>
+                        Environmental awareness initiatives.
+                    </li>
+
+                    <li>
+                        Youth coordination and teamwork.
+                    </li>
+
+                    <li>
+                        Community development activities.
+                    </li>
+
+                    <li>
+                        Tree planting and environmental
+                        sustainability projects.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FUTURE GOALS ================= -->
+
+    <section id="goals">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Future <span>Goals</span>
+            </h2>
+
+            <div class="skill-list">
+
+                <div class="skill">
+                    Software Development
+                </div>
+
+                <div class="skill">
+                    Big Data & Data Engineering
+                </div>
+
+                <div class="skill">
+                    Technology & Education
+                </div>
+
+                <div class="skill">
+                    Environmental Technology
+                </div>
+
+                <div class="skill">
+                    Social Impact Projects
+                </div>
+
+                <div class="skill">
+                    Professional Development
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
     <section class="contact" id="contact">
+
         <div class="container">
 
             <h2 class="section-title">
@@ -392,8 +536,8 @@
             </h2>
 
             <p>
-                Interested in my work?
-                Connect with me on GitHub.
+                Let's connect and create something meaningful
+                together.
             </p>
 
             <a
@@ -402,19 +546,55 @@
                 rel="noopener noreferrer"
                 class="btn"
             >
-                Visit My GitHub
+                GitHub
             </a>
 
+            <a
+                href="mailto:"
+                class="btn btn-outline"
+            >
+                Email Me
+            </a>
+ <a href="cv.pdf" download class="btn btn-outline">
+    Download My CV
+</a>
+<div class="social-links">
+
+    <a href="https://github.com/liyanageisuru"
+       target="_blank"
+       rel="noopener noreferrer">
+        GitHub
+    </a>
+
+    <!-- Add your real LinkedIn URL -->
+    <a href="#contact">
+        LinkedIn
+    </a>
+
+</div>           
+
+
         </div>
+
     </section>
 
-    <!-- FOOTER -->
+
+    <!-- ================= FOOTER ================= -->
+
     <footer>
+
         <p>
             © 2026 Isuru Liyanage.
             All Rights Reserved.
         </p>
+
+        <p>
+            Designed & Developed by Isuru Liyanage
+        </p>
+
     </footer>
 
+
 </body>
+
 </html>
