@@ -1,21 +1,420 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Isuru Liyanage | Portfolio</title>
+
+    <meta name="description" content="Isuru Liyanage - Personal Developer Portfolio">
+
+    <style>
+        /* BASIC SETTINGS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+        header {
+            background: #111827;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #263449;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(
+                135deg, #0f172a, #172554
+            );
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .small-title {
+            color: #38bdf8;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0284c7;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 7px;
+            transition: 0.3s;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background: #0369a1;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #38bdf8;
+        }
+
+        /* COMMON SECTIONS */
+        section {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+        /* ABOUT */
+        .about-content {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        /* SKILLS */
+        .skills {
+            background: #111827;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .skill {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 20px 35px;
+            border-radius: 10px;
+            color: #38bdf8;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        /* PROJECTS */
+        .project-card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            max-width: 500px;
+            margin: auto;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #111827;
+            text-align: center;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+            background: #0b1120;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 70vh;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .skill {
+                padding: 15px 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Welcome to My Portfolio</h1>
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">ISURU.</a>
 
-    <h2>About Me</h2>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <p>Hello! I am learning Git and GitHub.</p>
+    <!-- HOME -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
 
-    <h2>My Skills</h2>
+                <p class="small-title">WELCOME TO MY PORTFOLIO</p>
 
-    <p>HTML | CSS | JavaScript | Git | GitHub</p>
+                <h1>
+                    Hi, I'm <span>Isuru Liyanage</span>
+                </h1>
+
+                <p>
+                    I'm learning Web Development and building
+                    my skills in HTML, CSS, JavaScript,
+                    Git and GitHub.
+                </p>
+
+                <a href="#projects" class="btn">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+
+            <h2 class="section-title">
+                About <span>Me</span>
+            </h2>
+
+            <div class="about-content">
+                <p>
+                    Hello! I'm Isuru Liyanage.
+
+                    I'm passionate about technology
+                    and learning web development.
+
+                    I enjoy creating websites and
+                    improving my programming skills.
+
+                    My goal is to become a professional
+                    web developer.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+        <div class="container">
+
+            <h2 class="section-title">
+                My <span>Skills</span>
+            </h2>
+
+            <div class="skill-list">
+
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Git</div>
+                <div class="skill">GitHub</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+
+            <h2 class="section-title">
+                My <span>Projects</span>
+            </h2>
+
+            <div class="project-card">
+
+                <h3>My Portfolio Website</h3>
+
+                <p>
+                    My personal portfolio website built
+                    using HTML and CSS and published
+                    using GitHub Pages.
+                </p>
+
+                <a
+                    href="https://github.com/liyanageisuru/MyPortfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn"
+                >
+                    View on GitHub
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+
+            <h2 class="section-title">
+                Contact <span>Me</span>
+            </h2>
+
+            <p>
+                Interested in my work?
+                Connect with me on GitHub.
+            </p>
+
+            <a
+                href="https://github.com/liyanageisuru"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+            >
+                Visit My GitHub
+            </a>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 Isuru Liyanage.
+            All Rights Reserved.
+        </p>
+    </footer>
 
 </body>
 </html>
